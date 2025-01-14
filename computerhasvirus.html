@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play and Redirect</title>
+    <script>
+        function redirectOnEnded() {
+            var audio = document.getElementById("myAudio");
+            audio.addEventListener("ended", function() {
+                window.location.href = "https://adhyperactive.github.io/youareanidiot/";
+            });
+        }
+    </script>
+    <style>
+        body, html {
+          height: 100%;
+        }
+        
+        .bg {
+          /* The image used */
+          background-image: url("img_girl.jpg");
+        
+          /* Full height */
+          height: 100%;
+        
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+    </style>
+</head>
+<body onload="redirectOnEnded()">
+    <h1>Warning: Your computer has virus.</h1>
+    <audio hidden autoplay=true id="myAudio" src="computer_has_virus.mp3" controls></audio>
+</body>
+</html>
